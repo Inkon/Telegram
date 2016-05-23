@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlack"
+>
+    <org.telegram.camera.components.FullScreenFrameLayout android:layout_width="wrap_content"
+                                                          android:layout_height="wrap_content">
+
+        <SurfaceView
+                android:id="@+id/camera_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+        />
+
+    </org.telegram.camera.components.FullScreenFrameLayout>
+
+    <org.telegram.camera.components.ButtonsBar
+            android:id="@+id/upper_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            custom:part_of_screen="8"
+    >
+        <org.telegram.camera.components.TimeLabel
+                android:id="@+id/time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:visibility="gone"
+        />
+        <org.telegram.camera.components.buttons.FlashButton
+                android:id="@+id/flash_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:visibility="gone"
+        />
+    </org.telegram.camera.components.ButtonsBar>
+
+    <org.telegram.camera.components.ButtonsBar
+            android:id="@+id/camera_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            custom:part_of_screen="@integer/default_part_of_screen">
+        <org.telegram.camera.components.AnimatedFrameLayout
+                android:id="@+id/camera_buttons_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorGray"
+        >
+            <org.telegram.camera.components.buttons.SwitchCameraButton
+                    android:id="@+id/button_switch_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    custom:margin_part="@fraction/default_margin_part"
+                    android:visibility="gone"
+            />
+        </org.telegram.camera.components.AnimatedFrameLayout>
+
+        <org.telegram.camera.components.buttons.SuperButton
+                android:id="@+id/super_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                custom:margin_part="@fraction/center_button_margin_part"
+
+        >
+        </org.telegram.camera.components.buttons.SuperButton>
+    </org.telegram.camera.components.ButtonsBar>
+
+    <org.telegram.camera.components.CirclesBar
+            android:id="@+id/circles_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@+id/camera_buttons"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            custom:show_animation="@anim/become_clear"
+            custom:hide_animation="@anim/become_transparent"
+    >
+    </org.telegram.camera.components.CirclesBar>
+</RelativeLayout>

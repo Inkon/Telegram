@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <org.telegram.camera.components.FullScreenFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+    >
+        <VideoView
+                android:id="@+id/video_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+        />
+    </org.telegram.camera.components.FullScreenFrameLayout>
+
+
+    <org.telegram.camera.components.ButtonsBar
+            android:id="@+id/choice_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrayTransparent"
+            android:layout_alignParentBottom="true"
+            custom:part_of_screen="@integer/default_part_of_screen">
+
+        <SeekBar
+                android:id="@+id/playback_progress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/seek_bar_height"
+                android:progressDrawable="@drawable/playback_progress"
+                android:layout_marginLeft="-16dp"
+                android:layout_marginRight="-16dp"
+                android:thumb="@color/colorWhite"
+                android:layout_gravity="top"
+        />
+        <org.telegram.camera.components.buttons.CircleButton
+                android:id="@+id/button_cancel_saving_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cancel_button"
+                android:layout_gravity="start|center_vertical"
+                custom:margin_part="@fraction/default_margin_part"/>
+
+        <org.telegram.camera.components.ImageViewWithMargin
+                android:id="@+id/button_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/video_play"
+                android:layout_gravity="center|center_vertical"
+                custom:margin_part="@fraction/small_button_margin_part"/>
+
+        <org.telegram.camera.components.buttons.CircleButton
+                android:id="@+id/button_save_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ok_button"
+                android:layout_gravity="end|center_vertical"
+                custom:margin_part="@fraction/default_margin_part"/>
+    </org.telegram.camera.components.ButtonsBar>
+</RelativeLayout>

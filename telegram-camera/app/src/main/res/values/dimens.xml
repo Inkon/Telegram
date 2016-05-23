@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="default_part_of_screen">6</integer>
+
+    <fraction name="default_margin_part">100%</fraction>
+    <fraction name="center_button_margin_part">25%</fraction>
+    <fraction name="small_button_margin_part">200%</fraction>
+    <fraction name="image_edit_margin">5%</fraction>
+
+    <fraction name="default_transparency">40%</fraction>
+
+    <!-- Animation durations -->
+    <integer name="rotation_duration">300</integer>
+    <integer name="collapse_duration">100</integer>
+    <integer name="expand_duration">200</integer>
+    <integer name="fast_expand_duration">100</integer>
+    <integer name="camera_button_duration">200</integer>
+    <integer name="fall_duration">400</integer>
+    <integer name="background_animation_duration">300</integer>
+
+    <!-- Edit image part -->
+    <integer name="edit_image_first_bar">8</integer>
+    <integer name="edit_image_second_bar">12</integer>
+
+    <!-- Sizes part -->
+    <dimen name="seek_bar_height">4dp</dimen>
+    <fraction name="ring_default_ratio">60%</fraction>
+
+    <!-- SuperButton -->
+    <integer name="camera_middle_part">10</integer>
+    <integer name="camera_small_part">2</integer>
+    <integer name="record_circle_part">4</integer>
+    <integer name="record_rounding_part">2</integer>
+    <integer name="stop_rounding_part">6</integer>
+    <integer name="stop_square_part">3</integer>
+
+    <integer name="animation_default_duration">200</integer>
+    <integer name="animation_fast">150</integer>
+    <integer name="animation_fastest">100</integer>
+
+</resources>

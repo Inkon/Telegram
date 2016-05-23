@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:custom="http://schemas.android.com/apk/res-auto"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content">
+    <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/shape_circle"
+            android:layout_gravity="start"
+    />
+    <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/shape_circle"
+            android:layout_gravity="start"
+    />
+    <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/shape_circle"
+            android:layout_gravity="start"
+    />
+    <org.telegram.camera.components.RoundedRectangle
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="start"
+            custom:rectangle_color="@color/transparentWhite"
+            custom:rounding="50%"
+    />
+
+</merge>

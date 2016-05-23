@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <com.theartofdev.edmodo.cropper.CropImageView
+            android:id="@+id/crop_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:layout_above="@+id/angle_change_buttons"
+            custom:cropGuidelines="on"
+            custom:cropBorderLineThickness="1dp"
+            custom:cropGuidelinesThickness="1dp"
+            custom:cropBorderCornerThickness="4dp"
+            custom:cropBorderCornerOffset="-2dp"
+            custom:cropAutoZoomEnabled="true"
+            custom:paddingEnd="2dp"
+            custom:paddingStart="2dp"
+    />
+
+    <org.telegram.camera.components.ImageViewWithMargin
+            android:id="@+id/edit_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:layout_above="@+id/angle_change_buttons"
+            android:visibility="gone"
+            custom:margin_part="@fraction/image_edit_margin"
+    />
+
+    <org.telegram.camera.components.ButtonsBar
+            android:id="@+id/angle_change_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:visibility="visible"
+            custom:part_of_screen="@integer/edit_image_first_bar"
+            android:layout_above="@+id/choice_buttons">
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <org.telegram.camera.components.FrameLayoutWithMargin
+                    android:id="@+id/rotation_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true">
+                <org.telegram.camera.components.buttons.CircleButton
+                        android:id="@+id/rotate_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rotate"
+                        custom:margin_part="@fraction/default_margin_part"
+                        android:layout_gravity="end"/>
+            </org.telegram.camera.components.FrameLayoutWithMargin>
+
+            <TextView
+                    android:id="@+id/angle_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="visible"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:layout_alignTop="@+id/spinner"
+                    android:layout_centerHorizontal="true"/>
+
+            <org.telegram.camera.components.SpinnerView
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:background="@color/colorBlack"
+                    custom:part_of_width="80%"
+                    custom:part_of_height="50%"
+                    android:layout_centerInParent="true"
+            />
+        </RelativeLayout>
+
+    </org.telegram.camera.components.ButtonsBar>
+
+    <org.telegram.camera.components.ButtonsBar
+            android:id="@+id/choice_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            custom:part_of_screen="@integer/edit_image_second_bar">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+        >
+            <Button android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGray"
+                    android:textColor="@color/colorWhite"
+                    style="?borderlessButtonStyle"
+                    android:text="@string/cancel"/>
+
+            <Button android:id="@+id/reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGray"
+                    android:textColor="@color/colorWhite"
+                    android:text="@string/reset"
+                    android:layout_toRightOf="@+id/cancel"
+                    style="?borderlessButtonStyle"
+                    android:layout_toEndOf="@+id/cancel"/>
+            <Button android:id="@+id/done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGray"
+                    android:textColor="@color/colorSkyBlue"
+                    android:text="@string/done"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    style="?borderlessButtonStyle"
+            />
+
+        </RelativeLayout>
+
+
+    </org.telegram.camera.components.ButtonsBar>
+
+</RelativeLayout>

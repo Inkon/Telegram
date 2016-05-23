@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ImageView
+            android:id="@+id/image_preview"
+            android:background="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/choice_buttons"
+    />
+    <org.telegram.camera.components.ButtonsBar
+            android:id="@+id/choice_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"
+            android:layout_alignParentBottom="true"
+            custom:part_of_screen="@integer/default_part_of_screen">
+
+        <org.telegram.camera.components.buttons.CircleButton
+                android:id="@+id/button_cancel_saving_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cancel_button"
+                android:layout_gravity="start|center_vertical"
+                custom:margin_part="@fraction/default_margin_part"/>
+
+        <org.telegram.camera.components.ImageViewWithMargin
+                android:id="@+id/button_edit_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/crop"
+                android:layout_gravity="center|center_vertical"
+                custom:margin_part="@fraction/small_button_margin_part"/>
+
+        <org.telegram.camera.components.buttons.CircleButton
+                android:id="@+id/button_save_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ok_button"
+                android:layout_gravity="end|center_vertical"
+                custom:margin_part="@fraction/default_margin_part"/>
+    </org.telegram.camera.components.ButtonsBar>
+</RelativeLayout>

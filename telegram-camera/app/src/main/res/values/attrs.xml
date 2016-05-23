@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="margin_part" format="fraction"/>
+    <attr name="show_animation" format="reference"/>
+    <attr name="hide_animation" format="reference"/>
+
+    <declare-styleable name="ButtonsBar">
+        <attr name="part_of_screen" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="ImageViewWithMargin">
+        <attr name="margin_part"/>
+    </declare-styleable>
+
+    <declare-styleable name="ButtonWithMargin">
+        <attr name="margin_part"/>
+        <attr name="show_animation"/>
+        <attr name="hide_animation"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleButton">
+        <attr name="margin_part"/>
+    </declare-styleable>
+
+    <declare-styleable name="SpinnerView">
+        <attr name="part_of_width" format="fraction"/>
+        <attr name="part_of_height" format="fraction"/>
+    </declare-styleable>
+
+    <declare-styleable name="Ring">
+        <attr name="inner_circle_ratio" format="fraction"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundedRectangle">
+        <attr name="begin_position" format="fraction"/>
+        <attr name="end_position" format="fraction"/>
+        <attr name="rounding" format="fraction"/>
+        <attr name="rectangle_color" format="color"/>
+        <attr name="horizontal_part" format="fraction"/>
+        <attr name="vertical_part" format="fraction"/>
+    </declare-styleable>
+</resources>

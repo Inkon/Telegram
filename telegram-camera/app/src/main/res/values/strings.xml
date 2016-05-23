@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Camera</string>
+    <string name="capture">Capture</string>
+
+    <!-- Labels -->
+    <string name="done">Done</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- No camera message -->
+    <string name="no_camera_title">No camera</string>
+    <string name="no_camera_message">There is no available camera</string>
+    <string name="ok">OK</string>
+
+    <!-- No free space message -->
+    <string name="no_free_space">No space</string>
+    <string name="no_free_space_message">Can\'t find free space to save photos</string>
+</resources>
